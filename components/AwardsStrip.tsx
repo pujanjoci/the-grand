@@ -161,12 +161,10 @@ const AwardsStrip: React.FC<AwardsStripProps> = ({
             <div className="flex-shrink-0">
               <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-gray-200 group-hover:border-gray-300 transition-all duration-300">
                 <img 
-                  src={getImagePath(award.imageName)} 
+                  src={getImagePath(award.imageName ?? "")}
                   alt={`${award.title} award`}
                   className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300"
                   onError={(e) => {
-                    // Fallback in case image doesn't exist
-                    console.warn(`Image not found: ${getImagePath(award.imageName)}`);
                   }}
                 />
               </div>
