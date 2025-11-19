@@ -2,19 +2,22 @@
 
 import { useEffect, useRef } from 'react';
 
-// Types
 interface Award {
   id: number;
   title: string;
   organization: string;
   year: string;
-  imageName: string; // Local image name without extension
+  imageName?: string;   // <-- make optional
+  icon?: string;
+  iconType?: string;
 }
 
+
 interface AwardsStripProps {
-  awards: Award[];
-  speed?: number; // pixels per second
+  awards?: Award[];
+  speed?: number;
 }
+
 
 // Resort & Spa themed awards data with local image names
 const defaultResortAwards = [
