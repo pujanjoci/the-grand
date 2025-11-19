@@ -9,7 +9,8 @@ const Hero = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isStickyActive, setIsStickyActive] = useState(true);
   const heroRef = useRef<HTMLDivElement>(null);
-  const animationFrameRef = useRef<number>();
+  const animationFrameRef = useRef<number | null>(null);
+
 
   // Animation constants
   const START_POSITION = 100; // Start from bottom
