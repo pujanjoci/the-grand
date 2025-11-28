@@ -11,20 +11,20 @@ import { Room } from '../types';
 
 import Link from 'next/link';
 
-// Import rooms data from JSON file
-import roomsData from '../data/rooms.json';
+// Import rooms data from TS file
+import { rooms } from '../data/rooms';
 
 export default function Home() {
   // Only take the first 3 rooms for featured section
-  const featuredRooms: Room[] = roomsData.featuredRooms.slice(0, 3);
+  const featuredRooms: Room[] = rooms.slice(0, 3);
 
   return (
     <>
       <Header />
-      
+
       <main>
         <Hero />
-        
+
         {/* About Section - Moved below Hero */}
         <section className="min-h-screen bg-gradient-to-br from-gray-100/80 to-white py-16 flex items-center">
           <div className="container mx-auto px-4">
@@ -39,15 +39,15 @@ export default function Home() {
                     <span className="font-bold font-parfumerie text-8xl">The Grand</span>
                   </h2>
                 </div>
-                
+
                 <div className="space-y-6">
                   <p className="text-lg text-gray-600 leading-relaxed">
-                    Nestled in the heart of the city, The Grand Hotel offers an unparalleled 
-                    experience of luxury and comfort. Our commitment to excellence ensures 
+                    Nestled in the heart of the city, The Grand Hotel offers an unparalleled
+                    experience of luxury and comfort. Our commitment to excellence ensures
                     every guest enjoys world-class service and amenities.
                   </p>
                   <p className="text-lg text-gray-600 leading-relaxed">
-                    From our elegantly appointed rooms to our exceptional dining experiences, 
+                    From our elegantly appointed rooms to our exceptional dining experiences,
                     every aspect of your stay is designed to create unforgettable memories.
                   </p>
                 </div>
@@ -63,20 +63,20 @@ export default function Home() {
                   </div>
                 </div>
 
-                <Link 
+                <Link
                   href="/about"
                   className="bg-white border-2 border-amber-700 text-amber-700 px-10 py-4 rounded-lg font-semibold hover:cursor-pointer transition-all duration-300 transform hover:scale-105 shadow-lg relative overflow-hidden group inline-block text-center"
                 >
                   <span className="relative z-10">Discover Our Story</span>
-                  
+
                   {/* Dark Shimmer Effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-700/60 to-transparent transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-800 ease-in-out"></div>
                 </Link>
               </div>
-              
+
               <div className="relative">
                 <div className="relative z-10">
-                  <img 
+                  <img
                     src="/assets/about.webp"
                     alt="Hotel Lobby"
                     className="rounded-2xl shadow-2xl w-full h-[600px] object-cover"
@@ -88,7 +88,7 @@ export default function Home() {
           </div>
         </section>
 
-        <Advert/>
+        <Advert />
 
         {/* Featured Rooms Section */}
         <section id="featured-rooms" className="py-20 bg-gray-50">
@@ -104,7 +104,7 @@ export default function Home() {
                 Discover our carefully curated selection of luxurious accommodations designed for the discerning traveler
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredRooms.map((room) => (
                 <RoomCard key={room.id} room={room} />
@@ -113,7 +113,7 @@ export default function Home() {
 
             {/* View All Rooms Button */}
             <div className="text-center mt-12">
-              <Link 
+              <Link
                 href="/rooms"
                 className="inline-flex items-center justify-center bg-amber-700 text-white px-12 py-4 rounded-lg font-semibold hover:bg-amber-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >

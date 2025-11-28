@@ -9,8 +9,8 @@ export default function Security() {
           {/* Header Section */}
           <div className="bg-gradient-to-r from-amber-800 to-amber-600 px-8 py-6">
             <div className="flex items-center justify-between">
-              <Link 
-                href="/" 
+              <Link
+                href="/"
                 className="inline-flex items-center text-amber-100 hover:text-white transition-colors duration-300 group"
               >
                 <svg className="w-4 h-4 mr-2 transition-transform duration-300 group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -224,7 +224,7 @@ export default function Security() {
                       <div className="p-6 bg-blue-50 rounded-xl text-center">
                         <div className="text-3xl mb-4">👮</div>
                         <h3 className="text-xl font-semibold text-blue-800 mb-2">Security Director</h3>
-                        <p className="text-blue-700 font-medium mb-1">Michael Chen</p>
+                        <p className="text-blue-700 font-medium mb-1">Pujan Joshi</p>
                         <p className="text-blue-600">security@the-grand.com</p>
                       </div>
                     </div>

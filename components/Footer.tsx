@@ -68,27 +68,27 @@ const ShieldCheckIcon = ({ className }: { className?: string }) => (
 // Social Icons
 const TwitterIcon = ({ className }: { className?: string }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24">
-    <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/>
+    <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
   </svg>
 );
 
 const FacebookIcon = ({ className }: { className?: string }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24">
-    <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd"/>
+    <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" />
   </svg>
 );
 
 const InstagramIcon = ({ className }: { className?: string }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24">
-    <path fillRule="evenodd" d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987c6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.7-3.062-1.75-.614-1.05-.614-2.35 0-3.4.614-1.05 1.765-1.75 3.062-1.75s2.448.7 3.062 1.75c.614 1.05.614 2.35 0 3.4-.614 1.05-1.765 1.75-3.062 1.75z" clipRule="evenodd"/>
-    <circle cx="15.549" cy="8.438" r="1.4"/>
-    <path fillRule="evenodd" d="M12.017 5.826c-3.403 0-6.161 2.759-6.161 6.161s2.758 6.161 6.161 6.161 6.161-2.759 6.161-6.161-2.758-6.161-6.161-6.161zm0 10.122c-2.187 0-3.96-1.773-3.96-3.96s1.773-3.96 3.96-3.96 3.96 1.773 3.96 3.96-1.773 3.96-3.96 3.96z" clipRule="evenodd"/>
+    <path fillRule="evenodd" d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987c6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.7-3.062-1.75-.614-1.05-.614-2.35 0-3.4.614-1.05 1.765-1.75 3.062-1.75s2.448.7 3.062 1.75c.614 1.05.614 2.35 0 3.4-.614 1.05-1.765 1.75-3.062 1.75z" clipRule="evenodd" />
+    <circle cx="15.549" cy="8.438" r="1.4" />
+    <path fillRule="evenodd" d="M12.017 5.826c-3.403 0-6.161 2.759-6.161 6.161s2.758 6.161 6.161 6.161 6.161-2.759 6.161-6.161-2.758-6.161-6.161-6.161zm0 10.122c-2.187 0-3.96-1.773-3.96-3.96s1.773-3.96 3.96-3.96 3.96 1.773 3.96 3.96-1.773 3.96-3.96 3.96z" clipRule="evenodd" />
   </svg>
 );
 
 const LinkedinIcon = ({ className }: { className?: string }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24">
-    <path d="M19.7 3H4.3A1.3 1.3 0 0 0 3 4.3v15.4A1.3 1.3 0 0 0 4.3 21h15.4a1.3 1.3 0 0 0 1.3-1.3V4.3A1.3 1.3 0 0 0 19.7 3zM8.339 18.338H5.667v-8.59h2.672v8.59zM7.004 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.764H15.67v-4.177c0-.996-.017-2.278-1.387-2.278-1.389 0-1.601 1.086-1.601 2.206v4.25h-2.667v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.779 3.203 4.092v4.71z"/>
+    <path d="M19.7 3H4.3A1.3 1.3 0 0 0 3 4.3v15.4A1.3 1.3 0 0 0 4.3 21h15.4a1.3 1.3 0 0 0 1.3-1.3V4.3A1.3 1.3 0 0 0 19.7 3zM8.339 18.338H5.667v-8.59h2.672v8.59zM7.004 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.764H15.67v-4.177c0-.996-.017-2.278-1.387-2.278-1.389 0-1.601 1.086-1.601 2.206v4.25h-2.667v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.779 3.203 4.092v4.71z" />
   </svg>
 );
 
@@ -110,7 +110,7 @@ export default function Footer() {
               The Grand
             </h3>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Experience unparalleled luxury and exceptional service in the heart of the city. 
+              Experience unparalleled luxury and exceptional service in the heart of the city.
               Your perfect getaway awaits at The-Grand.
             </p>
             <div className="flex space-x-4 pt-2">
@@ -141,7 +141,8 @@ export default function Footer() {
                 { name: 'Dining', href: '/dining' },
                 { name: 'Spa & Wellness', href: '/spa' },
                 { name: 'Events & Meetings', href: '/events' },
-                { name: 'Gallery', href: '/gallery' }
+                { name: 'Gallery', href: '/gallery' },
+                { name: 'Contact', href: '/contact' }
               ].map((link) => (
                 <li key={link.name}>
                   <Link
@@ -197,7 +198,7 @@ export default function Footer() {
               <button className="w-full bg-gradient-to-r from-amber-500 to-amber-800 text-white py-3 rounded-lg cursor-pointer transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-[0.98] relative overflow-hidden group flex items-center justify-center space-x-2">
                 <EnvelopeIcon className="w-4 h-4 relative z-10" />
                 <span className="relative z-10">Subscribe</span>
-                
+
                 {/* Shimmer/Shine Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-300 to-transparent transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-in-out"></div>
               </button>
@@ -222,7 +223,7 @@ export default function Footer() {
                 { name: 'Security', icon: ShieldCheckIcon, href: '/security' },
                 { name: 'FAQ', icon: QuestionMarkCircleIcon, href: '/faq' }
               ].map((link) => (
-                <Link 
+                <Link
                   key={link.name}
                   href={link.href}
                   className="hover:text-amber-800 transition-colors duration-300 flex items-center space-x-1"

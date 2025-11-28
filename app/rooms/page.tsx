@@ -1,3 +1,5 @@
+"use client";
+
 import Header from '../../components/Header';
 import RoomCard from '../../components/RoomCard';
 import Footer from '../../components/Footer';
@@ -6,22 +8,22 @@ import { Room } from '../../types';
 import Link from 'next/link';
 
 // Import Hero Icons
-import { 
-  Wifi, 
-  Tv, 
-  Coffee, 
-  Wine, 
-  Bath, 
+import {
+  Wifi,
+  Tv,
+  Coffee,
+  Wine,
+  Bath,
   Home,
   Users,
   MapPin
 } from 'lucide-react';
 
-// Import rooms data from JSON file
-import roomsData from '../../data/rooms.json';
+// Import rooms data from TS file
+import { rooms } from '../../data/rooms';
 
 export default function Rooms() {
-  const allRooms: Room[] = roomsData.featuredRooms;
+  const allRooms: Room[] = rooms;
 
   return (
     <>
@@ -45,7 +47,7 @@ export default function Rooms() {
                 Rooms & Suites
               </h2>
               <p className="bg-gradient-to-r from-amber-500 to-red-500 bg-clip-text text-transparent max-w-2xl mx-auto leading-relaxed">
-                Each of our rooms and suites is thoughtfully designed to provide 
+                Each of our rooms and suites is thoughtfully designed to provide
                 the perfect blend of comfort, style, and functionality
               </p>
             </div>
@@ -143,8 +145,8 @@ export default function Rooms() {
                   description: "Prime location with easy access to attractions"
                 }
               ].map((amenity, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group border border-gray-100"
                 >
                   <div className="flex items-center justify-center w-12 h-12 bg-amber-100 rounded-lg mb-4 group-hover:bg-amber-200 transition-colors duration-300">
@@ -174,13 +176,13 @@ export default function Rooms() {
               Book your stay today and discover why The Grand Hotel is the preferred choice for discerning travelers
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <Link
                 href="/booking"
                 className="bg-white text-amber-700 px-8 py-4 rounded-lg font-semibold hover:bg-amber-50 transition-all duration-300 transform hover:scale-105 shadow-lg inline-block text-center"
               >
                 Book Your Stay
               </Link>
-              <Link 
+              <Link
                 href="/contact"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-amber-700 transition-all duration-300 transform hover:scale-105 inline-block text-center"
               >
