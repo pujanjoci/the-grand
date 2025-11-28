@@ -1,26 +1,24 @@
 import { BookingData, bookingStore } from './bookingStore';
+import { sendBookingEmail } from './emailServiceMock';
 
 export async function createBooking(bookingData: BookingData) {
     try {
-        // 1. Save to local storage (mock database/session)
+        // 1. Save to local storage (client-side storage)
         bookingStore.saveBooking(bookingData);
 
-        // 2. Call API to send email (mock)
-        const response = await fetch('/api/book', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(bookingData),
-        });
+        // 2. Send mock email notification (client-side simulation)
+        await sendBookingEmail(bookingData);
 
-        if (!response.ok) {
-            throw new Error('Failed to create booking');
-        }
+        // 3. Log booking confirmation
+        console.log('✅ Booking created successfully:', bookingData);
 
-        return await response.json();
+        return {
+            success: true,
+            message: 'Booking processed successfully',
+            bookingId: `BK-${Date.now()}`
+        };
     } catch (error) {
-        console.error('Booking creation failed:', error);
+        console.error('❌ Booking creation failed:', error);
         throw error;
     }
 }

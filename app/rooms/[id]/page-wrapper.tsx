@@ -1,5 +1,4 @@
 import { rooms } from "@/data/rooms";
-import RoomDetailClient from "./RoomDetailClient";
 
 export async function generateStaticParams() {
     return rooms.map((room) => ({
@@ -7,4 +6,4 @@ export async function generateStaticParams() {
     }));
 }
 
-export default RoomDetailClient;
+export { default } from './RoomDetailClient';
