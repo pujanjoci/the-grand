@@ -1,19 +1,21 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  output: 'export',
-  basePath: '/the-grand',
-  trailingSlash: true,
-  reactStrictMode: true,
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
-    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'images.unsplash.com',
+        pathname: '/**',
+      },
+      // Add more hosts if needed
+      {
+        protocol: 'https',
+        hostname: '**.unsplash.com',
       },
     ],
+    // Optional: Add domains array for simpler configuration
+    domains: ['images.unsplash.com'],
   },
-};
+}
 
-export default nextConfig;
+module.exports = nextConfig

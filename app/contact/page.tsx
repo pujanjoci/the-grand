@@ -4,12 +4,12 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  EnvelopeIcon, 
-  PhoneIcon, 
-  MapPinIcon, 
+import {
+  EnvelopeIcon,
+  PhoneIcon,
+  MapPinIcon,
   ClockIcon,
-  PaperAirplaneIcon 
+  PaperAirplaneIcon
 } from '@heroicons/react/24/outline';
 
 export default function Contact() {
@@ -32,11 +32,11 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
     console.log('Form submitted:', formData);
-    
+
     setIsSubmitting(false);
     // Reset form or show success message
   };
@@ -65,13 +65,13 @@ export default function Contact() {
   return (
     <>
       <Header />
-      
+
       <main className="min-h-screen bg-white pt-24">
         {/* Contact Section */}
         <section className="py-16">
           <div className="container mx-auto px-4 max-w-6xl">
             {/* Page Title */}
-            <motion.div 
+            <motion.div
               className="text-center mb-16"
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -85,14 +85,14 @@ export default function Contact() {
               </p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className="grid grid-cols-1 lg:grid-cols-2 gap-16"
               variants={containerVariants}
               initial="hidden"
               animate="visible"
             >
               {/* Contact Information */}
-              <motion.div 
+              <motion.div
                 className="space-y-8"
                 variants={itemVariants}
               >
@@ -101,14 +101,14 @@ export default function Contact() {
                     Get in Touch
                   </h2>
                   <p className="text-gray-600 mb-8 leading-relaxed">
-                    Whether you're planning your stay, have questions about our amenities, 
-                    or need assistance with a reservation, we're here to help. Experience 
+                    Whether you're planning your stay, have questions about our amenities,
+                    or need assistance with a reservation, we're here to help. Experience
                     the luxury and attention to detail that defines The Grand.
                   </p>
                 </div>
 
                 <div className="space-y-6">
-                  <motion.div 
+                  <motion.div
                     className="flex items-start space-x-4 group cursor-pointer"
                     whileHover={{ x: 5 }}
                     transition={{ type: "spring", stiffness: 300 }}
@@ -121,14 +121,13 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Address</h3>
                       <p className="text-gray-600 text-sm">
-                        123 Grand Avenue<br />
-                        City, State 12345<br />
-                        United States
+                        Katunje, Bhaktapur<br />
+                        Nepal
                       </p>
                     </div>
                   </motion.div>
-                  
-                  <motion.div 
+
+                  <motion.div
                     className="flex items-start space-x-4 group cursor-pointer"
                     whileHover={{ x: 5 }}
                     transition={{ type: "spring", stiffness: 300 }}
@@ -140,11 +139,11 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                      <p className="text-gray-600 text-sm">+1 (555) 123-4567</p>
+                      <p className="text-gray-600 text-sm">+977 (98) 98989898 </p>
                     </div>
                   </motion.div>
-                  
-                  <motion.div 
+
+                  <motion.div
                     className="flex items-start space-x-4 group cursor-pointer"
                     whileHover={{ x: 5 }}
                     transition={{ type: "spring", stiffness: 300 }}
@@ -159,8 +158,8 @@ export default function Contact() {
                       <p className="text-gray-600 text-sm">info@thegrand.com</p>
                     </div>
                   </motion.div>
-                  
-                  <motion.div 
+
+                  <motion.div
                     className="flex items-start space-x-4 group cursor-pointer"
                     whileHover={{ x: 5 }}
                     transition={{ type: "spring", stiffness: 300 }}
@@ -182,7 +181,7 @@ export default function Contact() {
               </motion.div>
 
               {/* Contact Form */}
-              <motion.div 
+              <motion.div
                 className="bg-gray-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300"
                 variants={itemVariants}
                 whileHover={{ y: -5 }}
@@ -205,11 +204,11 @@ export default function Contact() {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all duration-300"
+                      className="w-full px-4 py-3 text-gray-400 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 focus:text-black transition-all duration-300"
                       required
                     />
                   </motion.div>
-                  
+
                   <motion.div
                     whileFocus={{ scale: 1.02 }}
                     transition={{ type: "spring", stiffness: 300 }}
@@ -223,11 +222,11 @@ export default function Contact() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all duration-300"
+                      className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-gray-400 focus:text-black transition-all duration-300"
                       required
                     />
                   </motion.div>
-                  
+
                   <motion.div
                     whileFocus={{ scale: 1.02 }}
                     transition={{ type: "spring", stiffness: 300 }}
@@ -241,11 +240,11 @@ export default function Contact() {
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all duration-300"
+                      className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-gray-400 focus:text-black transition-all duration-300"
                       required
                     />
                   </motion.div>
-                  
+
                   <motion.div
                     whileFocus={{ scale: 1.02 }}
                     transition={{ type: "spring", stiffness: 300 }}
@@ -259,11 +258,11 @@ export default function Contact() {
                       value={formData.message}
                       onChange={handleChange}
                       rows={5}
-                      className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all duration-300 resize-none"
+                      className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-gray-400 focus:text-black transition-all duration-300 resize-none"
                       required
                     ></textarea>
                   </motion.div>
-                  
+
                   <motion.button
                     type="submit"
                     disabled={isSubmitting}
