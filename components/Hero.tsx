@@ -25,11 +25,11 @@ const Hero = () => {
     const heroSection = heroRef.current;
     const sectionHeight = heroSection.offsetHeight;
     const scrollPosition = window.scrollY;
-    
+
     // Calculate scroll progress within first 50% of hero section
     const progress = Math.min(scrollPosition / (sectionHeight * 0.5), 1);
     setScrollProgress(progress);
-    
+
     // Sticky effect ends at 50% scroll
     setIsStickyActive(progress < 1);
   }, []);
@@ -37,7 +37,7 @@ const Hero = () => {
   // Optimized scroll listener
   useEffect(() => {
     let ticking = false;
-    
+
     const throttledScroll = () => {
       if (!ticking) {
         animationFrameRef.current = requestAnimationFrame(() => {
@@ -50,7 +50,7 @@ const Hero = () => {
 
     // Use passive scroll listener for better performance
     window.addEventListener('scroll', throttledScroll, { passive: true });
-    
+
     return () => {
       window.removeEventListener('scroll', throttledScroll);
       if (animationFrameRef.current) {
@@ -72,7 +72,7 @@ const Hero = () => {
     const easeOutQuart = (x: number): number => {
       return 1 - Math.pow(1 - x, 4);
     };
-    
+
     const easedProgress = easeOutQuart(scrollProgress);
 
     const currentPosition = START_POSITION - (easedProgress * (START_POSITION - END_POSITION));
@@ -90,7 +90,7 @@ const Hero = () => {
   const scrollToRooms = useCallback(() => {
     const roomsSection = document.getElementById('featured-rooms');
     if (roomsSection) {
-      roomsSection.scrollIntoView({ 
+      roomsSection.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
       });
@@ -116,18 +116,17 @@ const Hero = () => {
   const completionIndicatorOpacity = scrollProgress > 0.5 && isStickyActive ? 'opacity-100' : 'opacity-0 translate-y-10';
 
   return (
-    <section 
+    <section
       ref={heroRef}
       className="relative h-[150vh] flex items-start justify-center overflow-hidden"
     >
       {/* Background Container - Sticky until 50% */}
-      <div 
-        className={`${
-          isStickyActive ? 'fixed' : 'absolute'
-        } inset-0 transition-all duration-200`}
+      <div
+        className={`${isStickyActive ? 'fixed' : 'absolute'
+          } inset-0 transition-all duration-200`}
       >
         <Image
-          src="/assets/hero-bg.png"
+          src="/assets/Hero-bg.png"
           alt="The-Grand Hotel Luxury Experience"
           fill
           className="object-cover"
@@ -137,9 +136,9 @@ const Hero = () => {
           placeholder="blur"
           blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaUMk9DFSDIkeoXJ6jOhShUcVhIWd3KYy"
         />
-        
+
         {/* Gradient Overlay */}
-        <div 
+        <div
           className="absolute inset-0 transition-opacity duration-500"
           style={{
             background: `linear-gradient(to bottom, 
@@ -154,7 +153,7 @@ const Hero = () => {
 
       {/* Animated Content - Only active during sticky phase */}
       <div className="relative z-10 w-full max-w-6xl mx-auto h-screen flex items-center justify-center">
-        <div 
+        <div
           className="text-center text-white px-4 w-full will-change-transform"
           style={textStyles}
         >
@@ -175,22 +174,22 @@ const Hero = () => {
           {/* Description */}
           <div className="overflow-hidden mb-12">
             <p className="text-lg md:text-xl max-w-2xl italic mx-auto opacity-90 leading-relaxed">
-              Experience comfort and hospitality 
+              Experience comfort and hospitality
               in the heart of the city. Your extraordinary stay begins here.
             </p>
           </div>
 
           {/* CTA Buttons */}
           <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center transition-all duration-500 ${buttonOpacity}`}>
-            <Link 
+            <Link
               href="/contact"
               className="group bg-white text-amber-900 px-8 py-4 rounded-lg font-semibold hover:bg-amber-50 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-3xl relative overflow-hidden min-w-[200px] text-center"
             >
               <span className="relative z-10">Book Your Stay</span>
               <div className="absolute inset-0 bg-gradient-to-r from-amber-50 to-amber-100 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
             </Link>
-            
-            <Link 
+
+            <Link
               href="/rooms"
               className="group border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-amber-900 transition-all duration-300 transform hover:scale-105 backdrop-blur-sm min-w-[200px] text-center"
             >
@@ -202,10 +201,10 @@ const Hero = () => {
 
       {/* Initial Call to Action - Only show at very start */}
       {isStickyActive && (
-        <div 
+        <div
           className={`fixed bottom-8 left-1/2 transform -translate-x-1/2 transition-all duration-500 ${initialCTAOpacity}`}
         >
-          <button 
+          <button
             onClick={startExperience}
             className="flex flex-col items-center space-y-2 group"
           >
@@ -220,7 +219,7 @@ const Hero = () => {
       )}
 
       {/* Completion Indicator - Show when approaching 50% */}
-      <div 
+      <div
         className={`fixed bottom-8 left-1/2 transform -translate-x-1/2 transition-all duration-500 ${completionIndicatorOpacity}`}
       >
         <div className="text-center">
